@@ -1,0 +1,371 @@
+:root {
+	--color-1: cyan;
+	--color-2: lightskyblue;
+	--color-3: greenyellow;
+	--color-4: lightsalmon;
+}
+
+html * {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	/* remove at end 
+	border: dotted 1px lightgreen;
+	/* ------------- */
+}
+
+header {
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	/* remove at end */
+	background: repeating-radial-gradient(
+				#969 0%,
+				#969 3%,
+				#699 9%,
+				#699 12%,
+				#969 18%
+				);
+	/* ------------- */
+	width: 100%;
+	align-items: baseline;
+	padding: 3px 18px 3px 0;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	cursor: default;
+}
+
+h5 {
+	font-size: 22px;
+	font-family: Luminari, fantasy;
+}
+
+h5::before {
+	content: "☆ ";
+	color: var(--color-4);
+}
+
+h5::after {
+	content: " ☆";
+	color: var(--color-1);
+}
+
+h5 span:nth-child(4n + 1) {
+	color: var(--color-1);
+}
+
+h5 span:nth-child(4n + 2) {
+	color: var(--color-2);
+}
+
+h5 span:nth-child(4n + 3) {
+	color: var(--color-3);
+}
+
+h5 span:nth-child(4n + 4) {
+	color: var(--color-4);
+}
+
+#navbar a:not(:last-child) {
+	margin-right: 6px !important;
+}
+
+#navbar a {
+	color: var(--color-3);
+}
+
+#navbar a:hover {
+	color: var(--color-1);
+	cursor: pointer;
+}
+
+#navbar a:active {
+	color: var(--color-4);
+}
+
+
+
+#welcome-section {
+	height: 100vh;
+	background: repeating-radial-gradient(
+				#120900 0%,
+				#120900 3%,
+				#181209 9%,
+				#181209 12%,
+				#120900 18%
+				);
+	padding-top: 36px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#welcome-section {
+	padding: 9%;
+}
+
+#welcome-section h1 {
+	font-size: 4.5rem;
+	transform: rotate(-0deg);
+	color: lightsalmon;
+	text-align: center;
+	font-family: "p22-spooky", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: .2rem;
+}
+
+.dont-break {
+	display: inline-block;
+}
+
+#welcome-section h2 {
+	font-size: 5rem;
+	transform: rotate(-3deg);
+	text-align: center;
+	font-family: "learning-curve", cursive;
+	position: relative;
+	top: -9px;
+	left: 21%;
+	overflow: visible;
+	color: greenyellow;
+}
+
+#welcome-section p {
+	color: #99ddff;
+	font-size: 1.6rem;
+	text-align: center;
+	position: relative;
+	overflow: visible;
+}
+
+
+
+#projects {
+	background: repeating-linear-gradient(
+				12deg,
+				lightpink 0%,
+				lightpink 1%,
+				linen 2%,
+				linen 3%,
+				lightpink 4%
+			);
+	padding-top: 36px;
+	color: darkolivegreen;
+}
+
+#projects h3 {
+	margin: 12px 9px;
+}
+
+#projects .container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 98vw;
+	justify-content: space-evenly;
+	overflow: hidden;
+}
+
+.project-tile, .more-to-come {
+	flex-basis: auto;
+	flex-wrap: wrap;
+	flex-grow: 1;
+	flex-shrink: 1;
+	min-width: 280px;
+	margin: 0 6px 18px;
+	min-height: 280px;
+	position: relative;
+	overflow: hidden;
+
+}
+
+.project-tile img, .more-to-come img {
+	position: absolute;
+	width: 100%;
+	object-fit: cover;
+	object-position: top center;
+}
+
+.project-tile a {
+	position: absolute;
+	z-index: 3;
+	bottom: 0;
+	left: 0;
+	padding: 3px;
+	background: repeating-linear-gradient(
+				90deg,
+				#696 0%,
+				#696 3%,
+				#996 9%,
+				#996 12%,
+				#696 18%
+			);
+	color: var(--color-1);
+	letter-spacing: .2rem;
+}
+
+.project-tile:hover a:not([href=""]) {
+	color: var(--color-4);
+	cursor: pointer;
+	transition: color .3s;
+}
+
+.project-tile:active a:not([href=""]) {
+	color: var(--color-3);
+}
+
+.project-tile .selected {
+	position: absolute;
+	width: 100%;
+	height: 300px;
+	opacity: 0%;
+	z-index: 2;
+	visibility: hidden;
+	transition: opacity .3s;
+	transition-timing-function: ease-in-out;
+}
+
+.project-tile:hover .selected {
+	visibility: visible;
+	opacity: 30%;
+	cursor: pointer;
+	background: repeating-radial-gradient(
+				transparent 0%,
+				lightskyblue 10%,
+				transparent 20%
+				);
+}
+
+.more-to-come a {
+	position: absolute;
+	font-size: 2rem;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	word-spacing: 100vw;
+	top: 0;
+	left: 0;
+	padding-top: 72px;
+	color: var(--color-3);
+	background: repeating-radial-gradient(
+				#333920 0%,
+				#333920 3%,
+				#282219 9%,
+				#282219 12%,
+				#333920 18%
+				);
+	transition: color .3s;
+	transition-timing-function: ease-in-out;
+	letter-spacing: 3px;
+}
+
+.more-to-come {
+	/* transform: skew(20deg); */
+	border-radius: 100%;
+}
+
+.more-to-come a:hover {
+	color: var(--color-1);
+}
+
+.more-to-come a:active {
+	color: var(--color-2);
+}
+
+footer {
+	padding: 12px 12px 24px;
+	background: repeating-linear-gradient(
+				90deg,
+				aliceblue 0%,
+				lavenderblush 3%,
+				linen 6%,
+				aliceblue 9%
+			);
+	letter-spacing: 3px;
+	color: DarkSlateGray;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+
+}
+
+footer div {
+	width: 40%;
+}
+
+#smile {
+	background: radial-gradient(
+				blue 0%,
+				blue 30%,
+				navy 100%
+				);
+	border-radius: 100%;
+	position: relative;
+	z-index: 1;
+
+}
+
+.eye {
+	position: absolute;
+	background-color: lemonchiffon;
+	width: 9%;
+	height: 16%;
+	z-index: 3;
+	border-radius: 100%;
+	overflow: hidden;
+}
+
+.eye.left {
+	top: 20%;
+	left: 30%;
+}
+
+.eye.right {
+	top: 20%;
+	right: 30%;
+}
+
+.pupil {
+	width: 60%;
+	height: 100%;
+	background-color: #220;
+	border-radius: 100%;
+	margin: 10% auto;
+}
+
+.mouth {
+	position: absolute;
+	left: clac(50% - 30% / 2);
+	left:-webkit-calc(50% - 30% / 2);
+	width: 30%;
+	height: 6%;
+	background-color: red;
+	z-index: 3;
+	bottom: 16%;
+	border-radius: 100% 100% 50% 50%;
+}
+
+footer a {
+	color: CornflowerBlue;
+
+}
+
+footer a:hover {
+	color: lawngreen;
+}
+
+footer a:active {
+	color: lightsalmon;
+}
+
+@media (min-width: 1200px ) {
+	#smile {
+		height: 300px;
+		max-width: 300px;
+	}
+}
