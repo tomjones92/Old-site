@@ -1,0 +1,70 @@
+main {
+	display: flex;
+	flex-direction: column;
+	width: 96%;
+	max-width: 600px;
+	background-color: #fff6ff;
+	margin: 0 auto;
+	color: #002200;
+	font-family: monaco, monospace;
+}
+
+main:not(figcaption, li) {
+	text-align: center;
+}
+
+header {
+	margin: 0;
+}
+
+h1 {
+	margin: .5em 0 .2em;
+	font-family: Luminari, fantasy;
+}
+
+header p {
+	margin: 0 0 .5em;
+}
+
+#img-div {
+	margin: .5em 1.75em 1em;
+}
+
+figcaption {
+	font-style: italic;
+	margin: .2em 0 0;
+}
+
+figcaption, li {
+	text-align: left;
+}
+
+#tribute-info {
+	margin: .2em 0;
+}
+
+ul {
+	padding: 0 3em;
+}
+
+li {
+	padding: 0 0 1em;
+}
+
+#img-div {
+
+}
+
+#image {
+	width: 100%;
+	max-width: 1000px;
+	height: auto;
+}
+
+a, a:visited {
+	color: #005500;
+}
+
+a:hover {
+	color: #00dd00;
+}

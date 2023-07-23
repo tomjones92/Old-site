@@ -1,0 +1,158 @@
+/* body * {
+	border: solid 1px;
+} */
+
+
+#main-doc {
+	margin: 0 auto;
+	width: 95%;
+	background-color: lavenderblush;
+	color: #000011;
+	border-radius: 24px;
+	padding: 12px;
+	max-width: 700px;
+}
+
+
+h1 {
+	font-size: 2rem;
+}
+
+h1, h2, h3 {
+	font-family: "hobeaux", sans-serif;
+	ont-weight: 400;
+	font-style: normal;
+	padding: 3px 0;
+	margin: 0;
+}
+
+header {
+	margin: 0 0 16px;
+}
+
+header p {	
+	font-style: italic;
+}
+
+
+#navbar {
+	display: block;
+	text-align: center;
+	width: 100%;
+	margin: 6px auto 16px;
+}
+
+
+#nav-links {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	align-items: stretch;
+}
+
+.nav-link:not(a[href="#intro"]), .nav-link:not(a[href="#design"]) {
+	margin: 3px;
+	flex-basis: 20%;
+	flex-grow: 2;
+}
+
+#nav-links a[href="#intro"] {
+	margin: 3px;
+	flex-basis: 12%;
+}
+
+#nav-links a[href="#design"] {
+	margin: 3px;
+	flex-basis: 30%;
+	flex-grow: 4;
+}
+
+#nav-links a {
+	color: darkgreen;
+	border: solid 1px;
+	border-radius: 3px;
+	padding: 6px 0;
+}
+
+#nav-links a:hover {
+	color: coral;
+}
+
+.main-section {
+	margin: 0 0 30px;
+}
+
+code, a {
+	font-family: "ocr-a-std", monospace;
+	font-weight: 400;
+	font-style: normal;
+	font-size: .9rem;
+}
+
+p {
+	font-family: "bagatela", serif;
+	font-weight: 400;
+	font-style: normal;
+	margin: 0 0 24px;
+}
+
+img:not(figure img), figure {
+	display: block;
+	width: 80%;
+	max-width: 500px;
+	margin: 24px auto;
+}
+
+figure img {
+	width: 100%;
+}
+
+li:not(li:last-of-type) {
+	margin: 0 0 12px;
+}
+
+@media (min-width: 1000px) {
+	#main-doc {
+		background-color: transparent;
+		max-width: none;
+
+	}
+
+	h1 {
+		font-size: 1.3rem;
+	}
+
+	#navbar {
+		display: inline-block;
+		width: 200px;
+		margin: 3px 0;
+		float: left;
+		position: fixed;
+		z-index: 99;
+		border-radius: 30px;
+		background-color: goldenrod;
+		padding: 20px;
+		color: #330000;
+	}
+
+	#nav-links {
+	display: flex;
+	flex-flow: column; wrap;
+	justify-content: space-evenly;
+	align-items: stretch;
+	}
+
+	#guide {
+		
+		display: inline-block;
+		width: auto;
+		margin: 3px 30px 0 260px;
+		background-color: lavenderblush;
+		border-radius: 24px;
+		padding: 30px;
+		max-width: 800px;
+	}
+
+
+}
+

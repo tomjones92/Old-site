@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Monchhichi Fan Survey</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Title & Description -->
+  <header>
+    <h1 id="title">&#x2606; Monchhichi Fan Survey &#x2606;</h1>
+    <p id="description">Do you love Monchhichi? <3</p>
+  </header>
+
+  <form id="survey-form"> 
+    <!-- Name / Email / Age -->
+    <fieldset>
+      <label id="name-label" for="name-label">Name: <input type="text" id="name" name="name-label" placeholder="Enter your name here." required />
+      </label>
+      <label id="email-label" for="email-label">Email address: <input type="email" id="email" name="email-label" placeholder="Enter your email here." required />
+      </label>
+      <label id="number-label" for="number-label">Age: <input type="number" id="age" min="18" max="112" placeholder="99" name="number-label"/>
+      </label>
+    </fieldset>
+
+    <!-- Survey Questions -->
+    <fieldset>
+      <label for="fan">Are you a Monchhichi fan?
+        <select id="dropdown" name="fan">
+          <option value="0">Select</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </label>
+    
+      <label>Which of the following is your favourite Monchhichi? 
+        <label for="football">Football Monchhichi <input value="football" name="favmonchhi" type="radio"></label>
+        <label for="space">Space Monchhichi <input value="space" name="favmonchhi" type="radio"></label>
+        <label for="matcha">Matcha Monchhichi <input value="matcha" name="favmonchhi" type="radio"></label>
+        <label for="samurai">Samurai Monchhichi <input value="samurai" name="favmonchhi" type="radio"></label>
+        <label for="original">Original Monchhichi <input value="original" name="favmonchhi" type="radio"></label>
+        <label for="keyring">Keyring Monchhichi <input value="keyring" name="favmonchhi" type="radio"></label>
+      </label>
+
+      <label>Why do you love Monchhichi? (select multiple)
+        <label for="toes">Monchhichi Toes<input value="toes" name="why" type="checkbox"></label>
+        <label for="fashion">Monchhichi Fashion<input value="fashion" name="why" type="checkbox"></label>
+        <label for="hairstyles">Monchhichi Hairstyles<input value="hairstyles" name="why" type="checkbox"></label>
+        <label for="eyes">Monchhichi Eyes<input value="eyes" name="why" type="checkbox"></label>
+        <label for="nose">Monchhichi Nose<input value="nose" name="why" type="checkbox"></label>
+        <label for="smile">Monchhichi Smile<input value="smile" name="why" type="checkbox"></label>
+      </label>
+
+      <label for="which">Which style of Monchhichi would you like to see?
+          <textarea id="which" name="which" rows="3" cols="30" placeholder="I like to see a baseball Monchhichi..."></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+  </html>
