@@ -183,14 +183,16 @@ h5 span:nth-child(4n + 4) {
 
 }
 
-.project-tile img, .more-to-come img {
+.project-tile a img, .more-to-come img {
 	position: absolute;
 	width: 100%;
 	object-fit: cover;
 	object-position: top center;
+	top: 0;
+	left: 0;
 }
 
-.project-tile a {
+.project-tile a span {
 	position: absolute;
 	z-index: 3;
 	bottom: 0;
@@ -206,15 +208,16 @@ h5 span:nth-child(4n + 4) {
 			);
 	color: var(--color-1);
 	letter-spacing: .2rem;
+
 }
 
-.project-tile:hover a:not([href=""]) {
+.project-tile:hover a:not([href=""]) span {
 	color: var(--color-4);
 	cursor: pointer;
 	transition: color .3s;
 }
 
-.project-tile:active a:not([href=""]) {
+.project-tile:active a:not([href=""]) span {
 	color: var(--color-3);
 }
 
@@ -240,6 +243,15 @@ h5 span:nth-child(4n + 4) {
 				);
 }
 
+.project-tile:active .selected {
+	opacity: 30%;
+	background: repeating-radial-gradient(
+				transparent 0%,
+				var(--color-4) 10%,
+				transparent 20%
+				);
+}
+
 .more-to-come a {
 	position: absolute;
 	font-size: 2rem;
@@ -261,6 +273,7 @@ h5 span:nth-child(4n + 4) {
 	transition: color .3s;
 	transition-timing-function: ease-in-out;
 	letter-spacing: 3px;
+	pointer-events: none;
 }
 
 .more-to-come {
@@ -270,10 +283,12 @@ h5 span:nth-child(4n + 4) {
 
 .more-to-come a:hover {
 	color: var(--color-1);
+	pointer-events: none;
 }
 
 .more-to-come a:active {
 	color: var(--color-2);
+	pointer-events: none;
 }
 
 footer {
